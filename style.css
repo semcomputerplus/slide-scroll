@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: grey;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.site-wrap {
+  max-width: 888px;
+  margin: 88px auto;
+  background: white;
+  padding: 88px;
+}
+
+.align-left {
+  float: left;
+  margin-right: 8px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 8px;
+}
+
+.slide-in {}
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
