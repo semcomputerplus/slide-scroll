@@ -40,7 +40,7 @@ h1 {
 }
 
 .align-left.slide-in {
-  transform: translateX(-30%) scale(0.95);
+  transform: translateX(-30%) scale(0.95) rotate(30deg);
 }
 
 .align-right.slide-in {
