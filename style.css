@@ -36,15 +36,15 @@ h1 {
 
 .slide-in {
   opacity: 0;
-  transition: all 2s;
+  transition: all 1s;
 }
 
 .align-left.slide-in {
-  transform: translateX(-30%) scale(0.95) rotate(30deg);
+  transform: translateX(-30%) rotateY(180deg) scale(0.95);
 }
 
 .align-right.slide-in {
-  transform: translateX(30%) scale(0.95);
+  transform: translateX(30%) rotateY(180deg) scale(0.95);
 }
 
 .slide-in.active {
