@@ -34,7 +34,8 @@ h1 {
   margin-left: 8px;
 }
 
-.slide-in {}
+.slide-in {opacity: 0;
+transition: all;}
 
 .align-left.slide-in {
   transform: translateX(-30%) scale(0.95);
