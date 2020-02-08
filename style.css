@@ -34,17 +34,15 @@ h1 {
   margin-left: 8px;
 }
 
-.slide-in {
-  opacity: 0;
-  transition: all 0.5s;
-}
+.slide-in {opacity: 0; 
+          transition: all 3s;}
 
 .align-left.slide-in {
-  transform: translateX(-30%) scale(0.95) rotate(30deg);
+  transform: translateX(-30%) scale(2.95) ;
 }
 
 .align-right.slide-in {
-  transform: translateX(30%) scale(0.95);
+  transform: translateX(30%) scale(2.95);
 }
 
 .slide-in.active {
