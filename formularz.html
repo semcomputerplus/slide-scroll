@@ -33,7 +33,7 @@
           <div class="error" id="confirmationError"></div>
         </div>
         <div class="row">
-          <input id="sending" type="submit" value="Wyślij" disabled>
+          <input id="sending" type="submit" value="Wyślij">
         </div>
       </form>
     </div>
@@ -94,6 +94,13 @@
         document.getElementById("sending").disabled = true;
       }
     });
+
+
+if (document.getElementById('confirmation').checked == !true){
+//document.getElementById('sending').style.color = 'red';
+document.getElementById('sending').classList.add('disabled');
+}
+
   </script>
 </body>
 
