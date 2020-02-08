@@ -1,0 +1,49 @@
+body {
+    background: snow;
+    color:black;
+    margin:0;
+    padding:0;
+  }
+  
+  .slider-sms{
+    background-color: bisque;
+    border:2px solid green;
+    max-width:60%;
+    margin:auto;
+    padding:2em;
+    box-sizing:border-box;
+  }
+  
+  .row{
+    margin:1em 0;
+  }
+  
+  .row label{
+    display:inline-block;
+    width:35%;
+  }
+  
+  .form-inline label{
+    width:100%;
+  }
+  
+  .row input[type="submit"]{
+    border:2px dotted green;
+    display:run-in;
+  }
+  
+  .row input[type="submit"]::after{
+  content: 'aaaaa';
+  }
+  
+  .error{
+    background-color: red;
+    color:snow;
+  }
+  
+  @media screen and (max-width:767px){
+    .slider-sms{
+      max-width:95%;
+    }
+  }
+  
