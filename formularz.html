@@ -27,13 +27,13 @@
         </div>
         <div class="row">
           <div class="form-inline">
-            <label><input id="confirmation" type="checkbox" name="confirmation" value="Tak">Zgadzam się na otrzymywanie powiadomień <abbr
-                title="Krótka wiadomość tekstowa w telefonie">SMS</abbr>.</label>
-                      </div>
+            <label><input id="confirmation" type="checkbox" name="confirmation" value="Tak">Zgadzam się na otrzymywanie
+              powiadomień <abbr title="Krótka wiadomość tekstowa w telefonie">SMS</abbr>.</label>
+          </div>
           <div class="error" id="confirmationError"></div>
         </div>
         <div class="row">
-          <input type="submit" value="Wyślij">
+          <input id="sending" type="submit" value="Wyślij" disabled>
         </div>
       </form>
     </div>
@@ -84,6 +84,15 @@
         alert(dataPreview);
       }
     };
+    //
+    var checkbox = document.getElementById('confirmation');
+    checkbox.addEventListener('change', (event) => {
+      if (event.target.checked) {
+        document.getElementById("sending").disabled = false;
+      } else {
+        document.getElementById("sending").disabled = true;
+      }
+    });
   </script>
 </body>
 
