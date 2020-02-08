@@ -40,6 +40,12 @@ body {
     background-color: red;
     color:snow;
   }
+
+  .disabled{
+    color: grey;
+    background: transparent;
+    border-color: grey;
+  }
   
   @media screen and (max-width:767px){
     .slider-sms{
