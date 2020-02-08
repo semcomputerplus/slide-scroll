@@ -86,16 +86,6 @@
       }
     };
     //
-    var checkbox = document.getElementById('confirmation');
-    checkbox.addEventListener('change', (event) => {
-      if (event.target.checked) {
-        document.getElementById("sending").disabled = false;
-      } else {
-        document.getElementById("sending").disabled = true;
-      }
-    });
-
-
 if (document.getElementById('confirmation').checked == !true){
 //document.getElementById('sending').style.color = 'red';
 document.getElementById('sending').classList.add('disabled');
