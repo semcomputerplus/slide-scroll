@@ -27,7 +27,7 @@
         </div>
         <div class="row">
           <div class="form-inline">
-            <label><input id="confirmation" type="radio" name="confirmation" value="Tak">Zgadzam się na otrzymywanie powiadomień <abbr
+            <label><input id="confirmation" type="checkbox" name="confirmation" value="Tak">Zgadzam się na otrzymywanie powiadomień <abbr
                 title="Krótka wiadomość tekstowa w telefonie">SMS</abbr>.</label>
                       </div>
           <div class="error" id="confirmationError"></div>
@@ -45,7 +45,7 @@
     function validateForm() {
       var phoneNumber = document.contactForm.phoneNumber.value;
       var answer = document.contactForm.answer.value;
-      var confirmation = document.getElementById('confirmation').value;
+      var confirmation = document.getElementById('confirmation');
       var phoneNumberError = answerError = confirmationError = true;
       if (phoneNumber == "") {
         printError("phoneNumberError", "Wpisz swój dziewięciocyfrowy numer telefonu komórkowego");
@@ -69,7 +69,7 @@
           answerError = false;
         }
       }
-      if (confirmation == "") {
+      if (confirmation.checked == false) {
         printError("confirmationError",
           "Zaznacz pole zgody na otrzymywanie komunikatów tekstowych lub zrezygnuj z otrzymywania tych komunikatów");
       } else {
@@ -80,7 +80,7 @@
         return false;
       } else {
         var dataPreview = "Dziękujemy za wypełnienie formualarza: \n" + "Podany numer telefonu to: " + phoneNumber + "\n" +
-          "Zgoda na otrzymywanie wiadmości udzielona" + "\n";
+          "Zgoda na otrzymywanie wiadmości udzielona";
         alert(dataPreview);
       }
     };
