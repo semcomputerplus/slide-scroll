@@ -69,7 +69,7 @@
           answerError = false;
         }
       }
-      if (confirmation.checked == false) {
+      if (confirmation.checked == !true) {
         printError("confirmationError",
           "Zaznacz pole zgody na otrzymywanie komunikatów tekstowych lub zrezygnuj z otrzymywania tych komunikatów");
       } else {
@@ -79,8 +79,9 @@
       if ((phoneNumberError || answerError || confirmationError) == true) {
         return false;
       } else {
-        var dataPreview = "Dziękujemy za wypełnienie formualarza: \n" + "Podany numer telefonu to: " + phoneNumber + "\n" +
-          "Zgoda na otrzymywanie wiadmości udzielona";
+        var dataPreview = "Dziękujemy za wypełnienie formualarza: \n" +
+          "Podany numer telefonu to: " + phoneNumber + "\n" +
+          "Zgoda na otrzymywanie wiadmości udzielona" +" \n";
         alert(dataPreview);
       }
     };
