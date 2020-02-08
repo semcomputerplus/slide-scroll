@@ -33,7 +33,7 @@
           <div class="error" id="confirmationError"></div>
         </div>
         <div class="row">
-          <input id="sending" type="submit" value="Wyślij" disabled>
+          <input id="sending" type="submit" value="Wyślij">
         </div>
       </form>
     </div>
@@ -85,15 +85,6 @@
         alert(dataPreview);
       }
     };
-    //
-    var checkbox = document.getElementById('confirmation');
-    checkbox.addEventListener('change', (event) => {
-      if (event.target.checked) {
-        document.getElementById("sending").disabled = false;
-      } else {
-        document.getElementById("sending").disabled = true;
-      }
-    });
   </script>
 </body>
 
