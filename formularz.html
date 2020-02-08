@@ -27,7 +27,7 @@
         </div>
         <div class="row">
           <div class="form-inline">
-            <label><input id="confirm" type="checkbox" name="confirmation" value="Tak" required> Zgadzam się na otrzymywanie powiadomień <abbr
+            <label><input id="confirmation" type="radio" name="confirmation" value="Tak"> Zgadzam się na otrzymywanie powiadomień <abbr
                 title="Krótka wiadomość tekstowa w telefonie">SMS</abbr>.</label>
           </div>
           <div class="error" id="confirmationError"></div>
@@ -45,6 +45,7 @@
     function validateForm() {
       var phoneNumber = document.contactForm.phoneNumber.value;
       var answer = document.contactForm.answer.value;
+      var confirmation = document.getElementById('confirmation');
       //var confirmation = document.contactForm.confirmation.value;
       var phoneNumberError = answerError = confirmationError = true;
       if (phoneNumber == "") {
