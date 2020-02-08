@@ -45,7 +45,7 @@
     function validateForm() {
       var phoneNumber = document.contactForm.phoneNumber.value;
       var answer = document.contactForm.answer.value;
-      var confirmation = document.getElementById('confirmation');
+      var confirmation = document.getElementById('confirmation').value;
       var phoneNumberError = answerError = confirmationError = true;
       if (phoneNumber == "") {
         printError("phoneNumberError", "Wpisz swój dziewięciocyfrowy numer telefonu komórkowego");
