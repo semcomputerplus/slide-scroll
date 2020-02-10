@@ -1,2 +1,2 @@
-<a onclick="document.getElementsByTagName( 'html' )[0].classList.toggle( 'contrast' )">Zmiana kolorystyki</a>
-<a onclick="document.getElementsByTagName( 'html' )[0].classList.toggle( 'fBigger' )">Zmiana wielkości tekstu</a>
+<a href="javascript:void(0);" onclick="document.getElementsByTagName( 'html' )[0].classList.toggle( 'contrast' )">Zmiana kolorystyki</a>
+<a href="javascript:void(0);" onclick="document.getElementsByTagName( 'html' )[0].classList.toggle( 'fBigger' )">Zmiana wielkości tekstu</a>
