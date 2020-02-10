@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Formularz</title>
+  <link rel="stylesheet" href="formularz.css">
+</head>
+
+<body>
+  <div id="join-sms" class="buffer"></div>
+  <section class="slider-sms-container">
+    <div class="slider-sms">
+      <h2 class="join-sms">Zapisz się na wiadomości <abbr title="Krótka wiadomość tekstowa w telefonie">SMS</abbr></h2>
+      <form id="send-sms" class="send-sms" name="contactForm" method="post" onsubmit="return validateForm()">
+        <div class="row">
+          <label>Wpisz swój numer telefonu</label>
+          <input type="text" name="phoneNumber" maxlength="9">
+          <div class="error" id="phoneNumberError"></div>
+        </div>
+        <div class="row">
+          <label>Podaj wynik mnożenia - 2 razy 5 to&hellip;</label>
+          <input type="text" name="answer" maxlength="2">
+          <div class="error" id="answerError"></div>
+        </div>
+        <div class="row">
+          <div class="form-inline">
+            <label><input id="confirmation" type="checkbox" name="confirmation" value="Tak">Zgadzam się na otrzymywanie
+              powiadomień <abbr title="Krótka wiadomość tekstowa w telefonie">SMS</abbr>.</label>
+          </div>
+          <div class="error" id="confirmationError"></div>
+        </div>
+        <div class="row">
+          <input id="sending" type="submit" value="Wyślij">
+        </div>
+      </form>
+    </div>
+  </section>
+  <script>
+    function printError(elementForm, formMessage) {
+      document.getElementById(elementForm).innerHTML = formMessage;
+    }
+    function validateForm() {
+      var phoneNumber = document.contactForm.phoneNumber.value;
+      var answer = document.contactForm.answer.value;
+      var confirmation = document.getElementById('confirmation');
+      var phoneNumberError = answerError = confirmationError = true;
+      if (phoneNumber == "") {
+        printError("phoneNumberError", "Wpisz swój dziewięciocyfrowy numer telefonu komórkowego");
+      } else {
+        var regex = /^[1-9]\d{8}$/;
+        if (regex.test(phoneNumber) === false) {
+          printError("phoneNumberError", "Wpisz swój poprawny numer telefonu komórkowego (9 cyfr)");
+        } else {
+          printError("phoneNumberError", "");
+          phoneNumberError = false;
+        }
+      }
+      if (answer == "") {
+        printError("answerError", "Wpisz wynik mnożenia: 2 razy 5");
+      } else {
+        var regex = /^10+$/;
+        if (regex.test(answer) === false) {
+          printError("answerError", "Wpisz  poprawny wynik mnożenia: 2 razy 5");
+        } else {
+          printError("answerError", "");
+          answerError = false;
+        }
+      }
+      if (confirmation.checked == !true) {
+        printError("confirmationError",
+          "Zaznacz pole zgody na otrzymywanie komunikatów tekstowych lub zrezygnuj z otrzymywania tych komunikatów");
+      } else {
+        printError("confirmationError", "");
+        confirmationError = false;
+      }
+      if ((phoneNumberError || answerError || confirmationError) == true) {
+        return false;
+      } else {
+        var dataPreview = "Dziękujemy za wypełnienie formualarza: \n" +
+          "Podany numer telefonu to: " + phoneNumber + "\n" +
+          "Zgoda na otrzymywanie wiadmości udzielona" +" \n";
+        alert(dataPreview);
+      }
+    };
+    //
+if (document.getElementById('confirmation').checked == !true){
+//document.getElementById('sending').style.color = 'red';
+document.getElementById('sending').classList.add('disabled');
+} else {
+ document.getElementById('sending').classList.remove('disabled');
+}
+
+  </script>
+</body>
+
+</html>
