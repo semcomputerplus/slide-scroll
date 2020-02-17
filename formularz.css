@@ -41,7 +41,7 @@ body {
     color:snow;
   }
 
-  .disabled {
+  .disabled{
     color: grey;
     background: transparent;
     border-color: yellow;

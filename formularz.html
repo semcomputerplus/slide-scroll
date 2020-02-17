@@ -87,6 +87,7 @@
       }
     };
     //
+<<<<<<< HEAD
     var checkbox = document.getElementById('confirmation');
     checkbox.addEventListener('change', (event) => {
       if (event.target.checked) {
@@ -95,6 +96,15 @@
         document.getElementById("sending").disabled = true;
       }
     });
+=======
+if (document.getElementById('confirmation').checked == !true){
+//document.getElementById('sending').style.color = 'red';
+document.getElementById('sending').classList.add('disabled');
+} else {
+ document.getElementById('sending').classList.remove('disabled');
+}
+
+>>>>>>> c46ac8526075903aa4b38b02594cf89f85e14ca1
   </script>
 </body>
 
